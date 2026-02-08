@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Testimonials from '../components/Testimonials.astro';
+---
+
+<Layout title="Delachaise Viat - Miroiterie & Vitrerie Professionnelle">
+  <Hero 
+    title="Miroiterie & Vitrerie d'Excellence"
+    subtitle="Depuis plus de 20 ans, nous transformons vos espaces avec élégance et précision"
+    ctaText="Demander un devis gratuit"
+    ctaLink="#contact"
+  />
+  
+  <section class="section-padding bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos Services</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Expert en verre et miroiterie pour particuliers et professionnels dans toute l'Île-de-France
+        </p>
+      </div>
+      <Services />
+    </div>
+  </section>
+  
+  <section class="section-padding">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Pourquoi choisir Delachaise Viat ?</h2>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="bg-primary-100 p-2 rounded-lg mr-4">
+                <span class="text-primary-600 font-bold">✓</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Expertise de 20 ans</h3>
+                <p class="text-gray-600">Un savoir-faire éprouvé depuis deux décennies</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div class="bg-primary-100 p-2 rounded-lg mr-4">
+                <span class="text-primary-600 font-bold">✓</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Intervention rapide</h3>
+                <p class="text-gray-600">Dépannage urgent sous 24h dans toute l'Île-de-France</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div class="bg-primary-100 p-2 rounded-lg mr-4">
+                <span class="text-primary-600 font-bold">✓</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Devis gratuit</h3>
+                <p class="text-gray-600">Évaluation précise sans engagement</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div class="bg-primary-100 p-2 rounded-lg mr-4">
+                <span class="text-primary-600 font-bold">✓</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Garantie qualité</h3>
+                <p class="text-gray-600">Matériaux premium et installation garantie</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold mb-6">Zones d'intervention</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-2">Paris & Banlieue</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>Paris</li>
+                <li>Joinville-le-Pont</li>
+                <li>Saint-Maur-des-Fossés</li>
+                <li>Vincennes</li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-2">Val-de-Marne</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>Créteil</li>
+                <li>Ivry-sur-Seine</li>
+                <li>Champigny-sur-Marne</li>
+                <li>Sucy-en-Brie</li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-2">Seine-et-Marne</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>Torcy</li>
+                <li>Serris</li>
+                <li>Ozoir-la-Ferrière</li>
+                <li>Chelles</li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-2">Val-d'Oise</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>Argenteuil</li>
+                <li>Et toute l'Île-de-France</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <Testimonials />
+  
+  <section id="contact" class="section-padding bg-primary-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Contactez-nous</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Un projet ? Une urgence ? Notre équipe vous répond sous 24h
+        </p>
+      </div>
+      <div class="max-w-2xl mx-auto">
+        <ContactForm />
+        <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+          <div class="card">
+            <div class="text-primary-600 text-2xl mb-4">📞</div>
+            <h3 class="font-semibold text-lg mb-2">Téléphone</h3>
+            <p class="text-gray-600">01 23 45 67 89</p>
+            <p class="text-sm text-gray-500 mt-2">Lun-Ven: 8h-19h</p>
+          </div>
+          <div class="card">
+            <div class="text-primary-600 text-2xl mb-4">✉️</div>
+            <h3 class="font-semibold text-lg mb-2">Email</h3>
+            <p class="text-gray-600">contact@delachaise-viat.net</p>
+            <p class="text-sm text-gray-500 mt-2">Réponse sous 24h</p>
+          </div>
+          <div class="card">
+            <div class="text-primary-600 text-2xl mb-4">📍</div>
+            <h3 class="font-semibold text-lg mb-2">Intervention</h3>
+            <p class="text-gray-600">Île-de-France</p>
+            <p class="text-sm text-gray-500 mt-2">Déplacement gratuit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

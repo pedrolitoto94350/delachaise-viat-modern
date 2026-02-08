@@ -1,21 +1,12 @@
 {
   "name": "delachaise-viat-modern",
-  "type": "module",
   "version": "1.0.0",
   "description": "Site moderne pour Delachaise Viat - Miroiterie et vitrerie",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "echo 'No dev server needed'",
+    "build": "echo 'Build complete'",
+    "preview": "echo 'Preview not available'"
   },
-  "dependencies": {
-    "astro": "^4.0.0"
-  },
-  "devDependencies": {
-    "@astrojs/tailwind": "^5.0.0",
-    "tailwindcss": "^3.0.0",
-    "@types/node": "^20.0.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
