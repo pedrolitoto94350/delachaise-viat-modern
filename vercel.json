@@ -3,6 +3,6 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "static",
+  "framework": "vite",
   "regions": ["iad1"]
 }

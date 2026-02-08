@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Site moderne pour Delachaise Viat - Miroiterie et vitrerie",
   "scripts": {
-    "dev": "echo 'No dev server needed'",
+    "dev": "echo 'Ouvrir dist/index.html dans un navigateur'",
     "build": "mkdir -p dist && cp src/pages/index.html dist/index.html",
-    "preview": "echo 'Preview not available'"
+    "preview": "echo 'Preview: ouvrir dist/index.html'"
   },
   "dependencies": {},
   "devDependencies": {}
