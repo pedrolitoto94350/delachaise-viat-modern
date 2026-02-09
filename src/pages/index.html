@@ -87,6 +87,65 @@
             .service-card, .contact-form { padding: 1.5rem; }
             .gallery-item { height: 180px; }
         }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #0369a1;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top:active {
+            transform: translateY(-1px);
+        }
+        
+        /* Responsive pour mobile */
+        @media (max-width: 768px) {
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -270,6 +329,31 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.createElement('button');
+        backToTopButton.className = 'back-to-top';
+        backToTopButton.innerHTML = '↑';
+        backToTopButton.setAttribute('aria-label', 'Retour en haut de la page');
+        backToTopButton.setAttribute('title', 'Retour en haut');
+        document.body.appendChild(backToTopButton);
+        
+        // Show/hide button on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     </script>
